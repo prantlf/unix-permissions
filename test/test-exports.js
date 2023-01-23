@@ -1,6 +1,5 @@
-const { ok } = require('node:assert')
-
-const exported = require('.')
+import * as exported from '../dist/main.js'
+import { ok } from 'node:assert'
 
 ok(exported && typeof exported === 'object', 'named exports are exported')
 ok(typeof exported.equal === 'function', 'function "equal" is exported')
