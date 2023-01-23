@@ -4,7 +4,7 @@
 </picture>
 
 [![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/unix-permissions-lib)
-[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=404040)](https://unpkg.com/unix-permissions-lib?module)
+[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=404040)](https://unpkg.com/unix-permissions-lib)
 [![TypeScript](https://img.shields.io/badge/-Typed-808080?logo=typescript&colorA=404040&logoColor=0096ff)](/src/main.d.ts)
 [![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=404040)](https://codecov.io/gh/prantlf/unix-permissions)
 [![Minified size](https://img.shields.io/bundlephobia/minzip/unix-permissions-lib?label&colorA=404040&colorB=808080&logo=webpack)](https://bundlephobia.com/package/unix-permissions-lib)
