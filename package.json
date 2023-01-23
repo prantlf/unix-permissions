@@ -1,6 +1,6 @@
 {
   "name": "unix-permissions-lib",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "type": "module",
   "exports": {
     "types": "./dist/main.d.ts",
