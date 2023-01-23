@@ -1,3 +1,12 @@
+# 5.0.0
+
+Fork the project as a library for programmatic usage only
+
+- Rename the package to unix-permissions-lib
+- Expose ES, CJS and UMD exports, TypeScript types remain included
+- Remove the command-line interface together with the documentation and tests
+- Add VS Code settings
+
 # 4.8.0
 
 ## Features
