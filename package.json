@@ -4,7 +4,6 @@
   "type": "module",
   "exports": {
     "types": "./dist/main.d.ts",
-    "default": "./dist/main.js",
     "import": "./dist/main.js",
     "require": "./dist/main.cjs"
   },
