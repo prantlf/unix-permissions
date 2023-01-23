@@ -11,7 +11,10 @@
 
 Swiss Army knife for Unix permissions - a library for programmatic usage only.
 
-This is a fork to be used as a library which offers ES, CJS and UMD module formats as exports. If you need only the ES export or want to use the command line tool, use the [original project](https://github.com/ehmicky/unix-permissions).
+This is a fork to be used as a library which offers ES, CJS and UMD module
+formats as exports. If you need only the ES export or want to use the command
+line tool, use the
+[original project](https://github.com/ehmicky/unix-permissions).
 
 [Unix file permissions](https://en.wikipedia.org/wiki/File_system_permissions)
 can take many [shapes](#permission-types): [symbolic](docs/types.md#symbolic)
@@ -75,22 +78,20 @@ You can try this library:
 
 - either directly
   [in your browser](https://repl.it/@prantlf/unix-permissions-lib).
-- or by executing the [`examples` files](examples/README.md) in a terminal.
+- or by executing the [`examples` files](examples/README.md) using Node.js.
 
 # Install
 
-```bash
-npm install unix-permissions-lib
+This module can be installed in your project using NPM, PNPM or Yarn:
+
+```sh
+$ npm i unix-permissions-lib
+$ pnpm i unix-permissions-lib
+$ yarn add unix-permissions-lib
 ```
 
 This package works in both Node.js >=14.18.0 and
 [browsers](https://raw.githubusercontent.com/ehmicky/dev-tasks/main/src/browserslist).
-
-This is an ES module. It must be loaded using
-[an `import` or `import()` statement](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c),
-not `require()`. If TypeScript is used, it must be configured to
-[output ES modules](https://www.typescriptlang.org/docs/handbook/esm-node.html),
-not CommonJS.
 
 # Usage (JavaScript)
 
