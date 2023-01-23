@@ -7,6 +7,10 @@ export default {
   input: 'src/main.js',
   output: [
     {
+      file: 'dist/main.js',
+      sourcemap: true,
+    },
+    {
       file: 'dist/main.cjs',
       format: 'cjs',
       sourcemap: true,

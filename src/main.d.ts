@@ -47,9 +47,7 @@ type OctalStart = `${OctalOperator}${OctalPrefix}`
  * It is the same as `octal` except:
  *  - as a decimal number.
  *  - no operator can be used.
- *  - it can be used as input in [JavaScript](../README.md#usage-javascript) but
- *    not on the [command line](../README.md#usage-cli), where all numbers
- *    should be in [`octal`](#octal) form instead.
+ *  - it can be used as input in [JavaScript](../README.md#usage-javascript).
  *
  * @example
  * ```js

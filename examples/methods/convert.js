@@ -1,11 +1,11 @@
 // Demo of the `convert()` method in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/methods/convert.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/methods/convert.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { convert, positive } from 'unix-permissions'
+import { convert, positive } from 'unix-permissions-lib'
 
 console.log(convert.symbolic('111')) // 'a=x'
 

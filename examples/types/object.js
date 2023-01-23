@@ -1,11 +1,11 @@
 // Demo of the `object` permission type in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/types/object.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/types/object.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.symbolic({ others: { read: true, execute: true } }))
 // 'o+rx'

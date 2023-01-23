@@ -1,11 +1,11 @@
 // Demo of the `set()` method in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/methods/set.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/methods/set.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { set } from 'unix-permissions'
+import { set } from 'unix-permissions-lib'
 
 console.log(set('---------', 'a+x')) // '--x--x--x'
 

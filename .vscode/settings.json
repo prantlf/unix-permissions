@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    ".eslintcache": true,
+    "build": true,
+    "dist": true
+  }
+}

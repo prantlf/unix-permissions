@@ -2,12 +2,10 @@ import test from 'ava'
 import { each } from 'test-each'
 
 /* jscpd:ignore-start */
-import { callCli } from '../helpers/cli.test.js'
 import { BINARY_DATA } from '../helpers/data/binary.test.js'
 import { VALID_FULL_DATA } from '../helpers/data/full/main.test.js'
 
-import { equal } from 'unix-permissions'
-/* jscpd:ignore-end */
+import { equal } from 'unix-permissions-lib'
 
 each(BINARY_DATA, ({ title }, args) => {
   test(`equal (JavaScript) | ${title}`, (t) => {
@@ -17,10 +15,6 @@ each(BINARY_DATA, ({ title }, args) => {
       t.snapshot(error)
     }
   })
-
-  test(`equal (CLI) | ${title}`, async (t) => {
-    t.snapshot(await callCli('equal', ...args))
-  })
 })
 
 each(VALID_FULL_DATA, ({ title }, arg) => {
@@ -28,3 +22,4 @@ each(VALID_FULL_DATA, ({ title }, arg) => {
     t.true(equal(arg, arg))
   })
 })
+/* jscpd:ignore-end */

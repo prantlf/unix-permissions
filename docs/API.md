@@ -1,12 +1,12 @@
 # API
 
-The following methods are available both in
-[JavaScript](../README.md#usage-javascript) and on the
-[command line](../README.md#usage-cli).
+The following methods are available in
+[JavaScript](../README.md#usage-javascript).
 
 You can try all the examples below:
 
-- either directly [in your browser](https://repl.it/@ehmicky/unix-permissions).
+- either directly
+  [in your browser](https://repl.it/@prantlf/unix-permissions-lib).
 - or by executing the [`examples` files](../examples/README.md) in a terminal.
 
 All methods (except [`type()`](#typepermission)) throw an exception if the
@@ -30,7 +30,7 @@ mean "unset permissions". However you can use
 [`positive()`](#positivepermission) to overcome this issue.
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.symbolic('111')) // 'a=x'
 console.log(positive(convert.symbolic('111'))) // 'a+x'
@@ -49,7 +49,7 @@ try {
 Returns the `permission`'s [`type`](types.md) or `'invalid'`.
 
 ```js
-import { type } from 'unix-permissions'
+import { type } from 'unix-permissions-lib'
 
 console.log(type('1')) // 'octal'
 console.log(type(1)) // 'number'
@@ -64,7 +64,7 @@ Normalizes a `permission` to its canonical shape.
 Throws an exception if `permission` is invalid.
 
 ```js
-import { normalize } from 'unix-permissions'
+import { normalize } from 'unix-permissions-lib'
 
 console.log(normalize('1')) // '0001'
 console.log(normalize('g+x,o+x')) // 'go+x'
@@ -86,7 +86,7 @@ Removes all negative permissions. See
 explanation.
 
 ```js
-import { positive, invert } from 'unix-permissions'
+import { positive, invert } from 'unix-permissions-lib'
 
 console.log(positive('o+x,o-rw')) // 'o+x'
 console.log(positive('o=x')) // 'o+x'
@@ -99,10 +99,10 @@ console.log(invert(positive('660'))) // '-0660'
 
 Tests whether `permission` includes `permissions`.
 
-Returns `true` or `false` or (on the CLI) use the exit code `0` or `1`.
+Returns `true` or `false`.
 
 ```js
-import { contain } from 'unix-permissions'
+import { contain } from 'unix-permissions-lib'
 
 console.log(contain('--x--x--x', 'a=x')) // `true`
 console.log(contain('--x--x--x', 'a+x')) // `true`
@@ -120,10 +120,10 @@ console.log(contain('o+x,o-w', 'o+x', 'o-w')) // `true`
 
 Tests whether `permission` equals exactly `permissions`.
 
-Returns `true` or `false` or (on the CLI) use the exit code `0` or `1`.
+Returns `true` or `false`.
 
 ```js
-import { equal } from 'unix-permissions'
+import { equal } from 'unix-permissions-lib'
 
 console.log(equal('--x--x--x', 'a=x')) // `true`
 console.log(equal('--x--x--x', 'a+x')) // `false`
@@ -148,7 +148,7 @@ This can also be used to remove special permissions using
 [`umask`](https://linux.die.net/man/2/umask) do not allow them.
 
 ```js
-import { set } from 'unix-permissions'
+import { set } from 'unix-permissions-lib'
 
 console.log(set('---------', 'a+x')) // '--x--x--x'
 console.log(set('---------', 'a+x', 'a+r')) // 'r-xr-xr-x'
@@ -165,7 +165,7 @@ This can be used in combination with `set()` to unset `permissions` instead of
 setting them.
 
 ```js
-import { not, set } from 'unix-permissions'
+import { not, set } from 'unix-permissions-lib'
 
 console.log(not('u+xs')) // 'u-xs'
 console.log(not('u-xs')) // 'u+xs'
@@ -187,7 +187,7 @@ For example a [`umask`](https://linux.die.net/man/2/umask) of `117` means new
 files will be created with `661` permissions.
 
 ```js
-import { invert } from 'unix-permissions'
+import { invert } from 'unix-permissions-lib'
 
 console.log(invert('u+xs')) // 'u-x'
 console.log(invert('u-xs')) // 'u+x'
@@ -209,7 +209,7 @@ This can be useful if you are looking for the lowest permission of a several
 files, e.g. during a directory recursion.
 
 ```js
-import { min } from 'unix-permissions'
+import { min } from 'unix-permissions-lib'
 
 console.log(min('404', '440', '402')) // '0400'
 ```
@@ -219,7 +219,7 @@ console.log(min('404', '440', '402')) // '0400'
 Inverse of [`min()`](#minpermissions).
 
 ```js
-import { max } from 'unix-permissions'
+import { max } from 'unix-permissions-lib'
 
 console.log(max('404', '440', '402')) // '0446'
 ```

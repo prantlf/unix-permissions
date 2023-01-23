@@ -3,22 +3,22 @@
   <img alt="unix-permissions logo" src="https://raw.githubusercontent.com/ehmicky/design/main/unix-permissions/unix-permissions.png" width="500"/>
 </picture>
 
-[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/unix-permissions)
-[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=404040)](https://unpkg.com/unix-permissions?module)
+[![Node](https://img.shields.io/badge/-Node.js-808080?logo=node.js&colorA=404040&logoColor=66cc33)](https://www.npmjs.com/package/unix-permissions-lib)
+[![Browsers](https://img.shields.io/badge/-Browsers-808080?logo=firefox&colorA=404040)](https://unpkg.com/unix-permissions-lib?module)
 [![TypeScript](https://img.shields.io/badge/-Typed-808080?logo=typescript&colorA=404040&logoColor=0096ff)](/src/main.d.ts)
-[![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=404040)](https://codecov.io/gh/ehmicky/unix-permissions)
-[![Minified size](https://img.shields.io/bundlephobia/minzip/unix-permissions?label&colorA=404040&colorB=808080&logo=webpack)](https://bundlephobia.com/package/unix-permissions)
-[![Mastodon](https://img.shields.io/badge/-Mastodon-808080.svg?logo=mastodon&colorA=404040&logoColor=9590F9)](https://fosstodon.org/@ehmicky)
-[![Medium](https://img.shields.io/badge/-Medium-808080.svg?logo=medium&colorA=404040)](https://medium.com/@ehmicky)
+[![Codecov](https://img.shields.io/badge/-Tested%20100%25-808080?logo=codecov&colorA=404040)](https://codecov.io/gh/prantlf/unix-permissions)
+[![Minified size](https://img.shields.io/bundlephobia/minzip/unix-permissions-lib?label&colorA=404040&colorB=808080&logo=webpack)](https://bundlephobia.com/package/unix-permissions-lib)
 
-Swiss Army knife for Unix permissions.
+Swiss Army knife for Unix permissions - a library for programmatic usage only.
+
+This is a fork to be used as a library which offers ES, CJS and UMD module formats as exports. If you need only the ES export or want to use the command line tool, use the [original project](https://github.com/ehmicky/unix-permissions).
 
 [Unix file permissions](https://en.wikipedia.org/wiki/File_system_permissions)
 can take many [shapes](#permission-types): [symbolic](docs/types.md#symbolic)
 (`ug+rw`), [octal](docs/types.md#octal) (`660`) or a
 [list of characters](docs/types.md#stat) (`drw-rw----`). This library enables
 using any of [these](#permission-types) (instead of being limited to a single
-one) with any [Node.js](#examples-javascript) or [CLI command](#examples-cli).
+one) with any [Node.js](#examples-javascript).
 
 This library can also perform operations on Unix permissions such as:
 
@@ -44,12 +44,10 @@ using those strings.
 
 # Examples
 
-In JavaScript:
-
 <!-- eslint-disable n/no-sync -->
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 // Retrieve a file's permission as an object like
 // `{ user: { write: false, read: true, ... }, ... }` instead of a number
@@ -65,33 +63,24 @@ fs.writeFile('/my/file', content, { mode: convert.number('a=r') })
 process.umask(convert.number(invert('a-x')))
 
 // If your library takes Unix permissions as input, using
-// `unix-permissions` under the hood lets your users choose their
+// `unix-permissions-lib` under the hood lets your users choose their
 // favorite Unix permissions type.
 myLibrary.method({ mode: 'a-wx' })
 myLibrary.method({ mode: '444' })
-```
-
-On the command line:
-
-```bash
-$ stat -c "%a" /etc/passwd
-644
-
-$ unix-permissions convert.symbolic "$(stat -c "%a" /etc/passwd)"
-u=rw,go=r
 ```
 
 # Demo
 
 You can try this library:
 
-- either directly [in your browser](https://repl.it/@ehmicky/unix-permissions).
+- either directly
+  [in your browser](https://repl.it/@prantlf/unix-permissions-lib).
 - or by executing the [`examples` files](examples/README.md) in a terminal.
 
 # Install
 
 ```bash
-npm install unix-permissions
+npm install unix-permissions-lib
 ```
 
 This package works in both Node.js >=14.18.0 and
@@ -106,7 +95,7 @@ not CommonJS.
 # Usage (JavaScript)
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 // `permission` will be set to `rw-rw----`
 const permission = convert.stat('660')
@@ -114,16 +103,6 @@ const permission = convert.stat('660')
 
 Several methods other than `convert` are available but they mostly follow the
 same pattern. Permission strings are passed as input and returned as output.
-
-# Usage (CLI)
-
-```bash
-$ unix-permissions convert.stat 660
-rw-rw----
-```
-
-The same methods as in JavaScript are available. Exit code will be `1` if an
-error occurred, e.g. if the permission syntax is invalid.
 
 # Permission types
 

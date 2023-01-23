@@ -25,7 +25,7 @@ import {
   type PermissionObject,
   type Permission,
   type PermissionType,
-} from 'unix-permissions'
+} from 'unix-permissions-lib'
 
 expectAssignable<PermissionOctal>('1')
 expectAssignable<PermissionOctal>('11')

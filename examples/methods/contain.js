@@ -1,13 +1,13 @@
 // Demo of the `contain()` method in JavaScript.
 // This file can be run in a terminal with the following commands:
 //
-//   npm install unix-permissions
-//   node node_modules/unix-permissions/examples/methods/contain.js
+//   npm install unix-permissions-lib
+//   node node_modules/unix-permissions-lib/examples/methods/contain.js
 //
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { contain } from 'unix-permissions'
+import { contain } from 'unix-permissions-lib'
 
 console.log(contain('--x--x--x', 'a=x')) // `true`
 

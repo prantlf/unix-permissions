@@ -6,7 +6,8 @@ them.
 
 You can try all the examples below:
 
-- either directly [in your browser](https://repl.it/@ehmicky/unix-permissions).
+- either directly
+  [in your browser](https://repl.it/@prantlf/unix-permissions-lib).
 - or by executing the [`examples` files](../examples/README.md) in a terminal.
 
 ## octal
@@ -28,7 +29,7 @@ An operator can be prepended:
 - `-`: unset specified permissions
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.stat('720')) // 'rwx-w----'
 console.log(convert.stat('7000')) // '--S--S--T'
@@ -49,12 +50,10 @@ It is the same as `octal` except:
 
 - as a decimal number.
 - no operator can be used.
-- it can be used as input in [JavaScript](../README.md#usage-javascript) but not
-  on the [command line](../README.md#usage-cli), where all numbers should be in
-  [`octal`](#octal) form instead.
+- it can be used as input in [JavaScript](../README.md#usage-javascript).
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.stat(0)) // '---------'
 console.log(convert.stat(1)) // '--------x'
@@ -76,7 +75,7 @@ Optionally a first character can be specified to indicate the file type (e.g.
 `d` for directories).
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.octal('--------x')) // '0001'
 console.log(convert.octal('--x--x--x')) // '0111'
@@ -105,7 +104,7 @@ Several groups can be specified using a comma-separated list like `g+x,o+r`.
 User classes can be concatenated like `go+x`.
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.octal('o+wx')) // '+0003'
 console.log(convert.octal('o=wx')) // '0003'
@@ -137,7 +136,7 @@ The values can be `true`, `false` or `undefined`. `undefined` leaves permissions
 as is while `false` unsets them.
 
 ```js
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.symbolic({ others: { read: true, execute: true } }))
 // 'o+rx'
@@ -158,10 +157,4 @@ console.log(
   convert.symbolic({ special: { setuid: true, setgid: true, sticky: true } }),
 )
 // 'ug+s,o+t'
-```
-
-On the command line:
-
-```bash
-unix-permissions convert.symbolic '{ "all": { "read": true } }' # a+r
 ```

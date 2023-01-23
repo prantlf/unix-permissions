@@ -1,5 +1,5 @@
 {
-  "projectName": "unix-permissions",
+  "projectName": "unix-permissions-lib",
   "projectOwner": "ehmicky",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -20,6 +20,13 @@
         "design",
         "ideas",
         "doc"
+      ]
+    },
+    {
+      "login": "prantlf",
+      "name": "Ferdinand Prantl",
+      "contributions": [
+        "build"
       ]
     }
   ],

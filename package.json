@@ -1,36 +1,29 @@
 {
-  "name": "unix-permissions",
-  "version": "4.8.0",
+  "name": "unix-permissions-lib",
+  "version": "5.0.0",
   "type": "module",
   "exports": {
-    "types": "./build/src/main.d.ts",
-    "default": "./build/src/main.js",
-    "import": "./build/src/main.js",
+    "types": "./dist/main.d.ts",
+    "default": "./dist/main.js",
+    "import": "./dist/main.js",
     "require": "./dist/main.cjs"
   },
   "main": "./dist/main.cjs",
-  "module": "./build/src/main.js",
-  "types": "./build/src/main.d.ts",
+  "module": "./dist/main.js",
+  "types": "./dist/main.d.ts",
   "files": [
-    "build/src/**/*.{js,json,d.ts}",
-    "!build/src/**/*.test.js",
-    "!build/src/{helpers,fixtures}",
     "dist"
   ],
-  "bin": {
-    "unix-permissions": "build/src/bin/main.js"
-  },
   "sideEffects": false,
   "scripts": {
     "prepare": "rollup -c && cp.js src/main.d.ts dist",
     "test": "node test/test-exports.js && node test/test-exports.cjs && gulp test"
   },
-  "description": "Swiss Army knife for Unix permissions",
+  "description": "Swiss Army knife for Unix permissions - a library for programmatic usage only",
   "keywords": [
     "access-control",
     "acl",
     "chmod",
-    "cli",
     "javascript",
     "library",
     "nodejs",
@@ -43,36 +36,30 @@
     "stat",
     "sticky",
     "symbolic",
-    "terminal",
     "typescript",
     "umask",
     "unix"
   ],
   "license": "Apache-2.0",
-  "homepage": "https://www.github.com/ehmicky/unix-permissions",
-  "repository": "ehmicky/unix-permissions",
+  "homepage": "https://www.github.com/prantlf/unix-permissions",
+  "repository": "prantlf/unix-permissions",
   "bugs": {
-    "url": "https://github.com/ehmicky/unix-permissions/issues"
+    "url": "https://github.com/prantlf/unix-permissions/issues"
   },
   "author": "ehmicky <ehmicky@gmail.com> (https://github.com/ehmicky)",
+  "contributors": [
+    "Ferdinand Prantl <prantlf@gmail.com>"
+  ],
   "directories": {
     "doc": "docs",
     "lib": "src"
-  },
-  "dependencies": {
-    "filter-obj": "^5.1.0",
-    "handle-cli-error": "^3.1.1",
-    "is-plain-obj": "^4.1.0",
-    "read-pkg-up": "^9.1.0",
-    "update-notifier": "^6.0.2",
-    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "@ehmicky/dev-tasks": "^2.0.60",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@unixcompat/cp.js": "^1.0.0",
-    "execa": "^6.1.0",
-    "get-bin-path": "^8.0.0",
+    "filter-obj": "^5.1.0",
+    "is-plain-obj": "^4.1.0",
     "rollup": "^3.10.1",
     "rollup-plugin-cleanup": "^3.2.1",
     "rollup-plugin-swc-minify": "^1.0.5",

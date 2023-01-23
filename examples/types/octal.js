@@ -1,11 +1,11 @@
 // Demo of the `octal` permission type in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/types/octal.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/types/octal.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { convert } from 'unix-permissions'
+import { convert } from 'unix-permissions-lib'
 
 console.log(convert.stat('720')) // 'rwx-w----'
 

@@ -1,11 +1,11 @@
 // Demo of the `not()` method in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/methods/not.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/methods/not.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { not, set } from 'unix-permissions'
+import { not, set } from 'unix-permissions-lib'
 
 console.log(not('u+xs')) // 'u-xs'
 

@@ -1,11 +1,11 @@
 // Demo of the `equal()` method in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/methods/equal.js`
+//   - first install `unix-permissions-lib`
+//   - then `node node_modules/unix-permissions-lib/examples/methods/equal.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { equal } from 'unix-permissions'
+import { equal } from 'unix-permissions-lib'
 
 console.log(equal('--x--x--x', 'a=x')) // `true`
 

@@ -4,7 +4,7 @@ import { each } from 'test-each'
 import { VALID_FULL_DATA } from './helpers/data/full/main.test.js'
 import { TYPES } from './helpers/data/types.test.js'
 
-import { convert, normalize, type as getType } from 'unix-permissions'
+import { convert, normalize, type as getType } from 'unix-permissions-lib'
 
 // Conversion between some types loses information
 const isLossy = (type, otherType) =>

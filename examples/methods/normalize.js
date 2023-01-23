@@ -1,11 +1,11 @@
 // Demo of the `normalize()` method in JavaScript.
 // This file can be directly run:
-//   - first install `unix-permissions`
-//   - then `node node_modules/unix-permissions/examples/methods/normalize.js`
+//   - first install `unix-permissions-lib-lib`
+//   - then `node node_modules/unix-permissions-lib-lib/examples/methods/normalize.js`
 // An online demo is also available at:
-//   https://repl.it/@ehmicky/unix-permissions
+//   https://repl.it/@prantlf/unix-permissions-lib
 
-import { normalize } from 'unix-permissions'
+import { normalize } from 'unix-permissions-lib-lib'
 
 console.log(normalize('1')) // '0001'
 
