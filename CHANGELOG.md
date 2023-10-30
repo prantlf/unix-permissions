@@ -1,12 +1,19 @@
+# [6.0.1](https://github.com/prantlf/unix-permissions/compare/v5.0.1...v6.0.1) (2023-10-30)
+
+## Bug Fixes
+
+- Merge remote-tracking branch 'upstream/main'
+  ([3f4b981](https://github.com/prantlf/unix-permissions/commit/3f4b981d5282f9413e337ff4676a019df034019f))
+
 # 6.0.0
 
 ## Breaking changes
 
 - Minimal supported Node.js version is now `18.18.0`
 
-## [5.0.1](https://github.com/prantlf/unix-permissions/compare/v5.0.0...v5.0.1) (2023-01-23)
+# [5.0.1](https://github.com/prantlf/unix-permissions/compare/v5.0.0...v5.0.1) (2023-01-23)
 
-### Bug Fixes
+## Bug Fixes
 
 - Remove the default export from package.json
   ([6d2c6d3](https://github.com/prantlf/unix-permissions/commit/6d2c6d378c9174107eb28d5f9db2297ec5398316))
