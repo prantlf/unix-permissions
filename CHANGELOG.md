@@ -1,9 +1,15 @@
-## [5.0.1](https://github.com/prantlf/unix-permissions/compare/v5.0.0...v5.0.1) (2023-01-23)
+# 6.0.0
 
+## Breaking changes
+
+- Minimal supported Node.js version is now `18.18.0`
+
+## [5.0.1](https://github.com/prantlf/unix-permissions/compare/v5.0.0...v5.0.1) (2023-01-23)
 
 ### Bug Fixes
 
-* Remove the default export from package.json ([6d2c6d3](https://github.com/prantlf/unix-permissions/commit/6d2c6d378c9174107eb28d5f9db2297ec5398316))
+- Remove the default export from package.json
+  ([6d2c6d3](https://github.com/prantlf/unix-permissions/commit/6d2c6d378c9174107eb28d5f9db2297ec5398316))
 
 # 5.0.0
 
@@ -13,6 +19,12 @@ Fork the project as a library for programmatic usage only
 - Expose ES, CJS and UMD exports, TypeScript types remain included
 - Remove the command-line interface together with the documentation and tests
 - Add VS Code settings
+
+# 5.0.0
+
+## Breaking changes
+
+- Minimal supported Node.js version is now `16.17.0`
 
 # 4.8.0
 

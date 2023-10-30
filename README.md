@@ -45,6 +45,15 @@ use other utilities (such as [`chmod`](https://linux.die.net/man/1/chmod) or
 [`stat`](https://linux.die.net/man/2/stat)) to get and set file permissions
 using those strings.
 
+# Hire me
+
+Please
+[reach out](https://www.linkedin.com/feed/update/urn:li:activity:7117265228068716545/)
+if you're looking for a Node.js API or CLI engineer (11 years of experience).
+Most recently I have been [Netlify Build](https://github.com/netlify/build)'s
+and [Netlify Plugins](https://www.netlify.com/products/build/plugins/)'
+technical lead for 2.5 years. I am available for full-time remote positions.
+
 # Examples
 
 <!-- eslint-disable n/no-sync -->
@@ -90,7 +99,7 @@ $ pnpm i unix-permissions-lib
 $ yarn add unix-permissions-lib
 ```
 
-This package works in both Node.js >=14.18.0 and
+This package works in both Node.js >=18.18.0 and
 [browsers](https://raw.githubusercontent.com/ehmicky/dev-tasks/main/src/browserslist).
 
 # Usage (JavaScript)
